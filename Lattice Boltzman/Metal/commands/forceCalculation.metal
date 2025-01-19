@@ -24,7 +24,7 @@ kernel void forceCalculation(device float3* vertices,
     
     float3 velocity = float3(velocityAndDensity);
     float density = velocityAndDensity[3];
-    float momentum = density * length(velocity);
+//    float momentum = density * length(velocity);
     force = force * 0.8 + density * 0.2;
     forces[index] = force;
 }

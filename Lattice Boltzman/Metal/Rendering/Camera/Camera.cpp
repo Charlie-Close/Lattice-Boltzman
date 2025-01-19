@@ -112,7 +112,6 @@ void Camera::handleMouseDrag(float x, float y) {
     // Update front vector
     simd_float3 direction;
     float yawRad = yaw * M_PI / 180.f;
-    float pitchRad = pitch * M_PI / 180.f;
     direction.x = cos(yawRad) * cos(pitch);
     direction.y = sin(pitch);
     direction.z = sin(yawRad) * cos(pitch);
