@@ -36,7 +36,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
       useCustomWorkingDirectory = "YES"
-      customWorkingDirectory = "/Users/charlieclose/Documents/Programs/C++/Lattice Boltzman/Lattice Boltzman"
+      customWorkingDirectory = "$PROJECT_DIR//Lattice Boltzman"
       ignoresPersistentStateOnLaunch = "YES"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
