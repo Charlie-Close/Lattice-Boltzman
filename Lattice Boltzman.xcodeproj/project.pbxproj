@@ -529,8 +529,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
-					"/Users/charlieclose/Documents/Programs/C++/metal-cpp",
-					"/Users/charlieclose/Documents/Programs/C++/metal-cpp-extensions",
+					"metal-cpp",
+					"metal-cpp-extensions",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -542,8 +542,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = (
-					"/Users/charlieclose/Documents/Programs/C++/metal-cpp",
-					"/Users/charlieclose/Documents/Programs/C++/metal-cpp-extensions",
+					"metal-cpp",
+					"metal-cpp-extensions",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
