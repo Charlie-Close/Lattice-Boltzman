@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B5C9B942D3C0F56003302F2 /* particles.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C9B932D3C0F56003302F2 /* particles.metal */; };
+		5B5C9B9D2D3C14B1003302F2 /* MeshHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C9B9C2D3C14B1003302F2 /* MeshHelpers.cpp */; };
+		5B5C9BA72D3C6101003302F2 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B5C9BA62D3C6101003302F2 /* Mesh.cpp */; };
+		5BBB6F1F2D1301A300183FFC /* Interpolate.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB6F1E2D1301A300183FFC /* Interpolate.metal */; };
+		5BBB6F232D130D5E00183FFC /* forceCalculation.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5BBB6F222D130D5E00183FFC /* forceCalculation.metal */; };
+		5BFF80EC2D0218B40096B3B0 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFF80EB2D0218B40096B3B0 /* Metal.framework */; };
+		5BFF80EE2D0218BA0096B3B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFF80ED2D0218BA0096B3B0 /* Foundation.framework */; };
+		5BFF80F32D0219040096B3B0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF80F12D0219040096B3B0 /* main.cpp */; };
+		5BFF80FF2D0254440096B3B0 /* step.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF80FE2D0254440096B3B0 /* step.metal */; };
+		5BFF81472D05BA9F0096B3B0 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFF81442D05B56A0096B3B0 /* MetalKit.framework */; };
+		5BFF814C2D05C1D50096B3B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BFF814B2D05C1D50096B3B0 /* QuartzCore.framework */; };
+		5BFF81842D05DEF50096B3B0 /* Render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF81832D05DEED0096B3B0 /* Render.cpp */; };
+		5BFF81872D05E3010096B3B0 /* render.metal in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF81862D05E3010096B3B0 /* render.metal */; };
+		5BFF818A2D05F9770096B3B0 /* ViewExtender.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF81892D05F9770096B3B0 /* ViewExtender.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5BFF818D2D05FEE90096B3B0 /* ViewPass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF818C2D05FED40096B3B0 /* ViewPass.m */; };
+		5BFF81932D060C970096B3B0 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF81922D060C970096B3B0 /* Camera.cpp */; };
+		5BFF819B2D07298F0096B3B0 /* Compute.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF819A2D07298F0096B3B0 /* Compute.cpp */; };
+		5BFF81A32D072B5F0096B3B0 /* ParticleTrails.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF81A22D072B5F0096B3B0 /* ParticleTrails.cpp */; };
+		5BFF81A82D07341F0096B3B0 /* InteriorTesting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF81A72D07341F0096B3B0 /* InteriorTesting.cpp */; };
+		5BFF81B22D09F7A40096B3B0 /* MetalHelpers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF81B12D09F7A40096B3B0 /* MetalHelpers.cpp */; };
+		5BFF81BA2D0A22CD0096B3B0 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF81B92D0A22CD0096B3B0 /* AppDelegate.cpp */; };
+		5BFF81BE2D0A23870096B3B0 /* ViewDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BFF81BD2D0A23870096B3B0 /* ViewDelegate.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5BFF80DE2D0218890096B3B0 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5B5126D02D0DFD5500988EF1 /* sphere.stl */ = {isa = PBXFileReference; lastKnownFileType = text; path = sphere.stl; sourceTree = "<group>"; };
+		5B5126D12D0EDF4C00988EF1 /* tube.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = tube.stl; sourceTree = "<group>"; };
+		5B5C9B932D3C0F56003302F2 /* particles.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = particles.metal; sourceTree = "<group>"; };
+		5B5C9B9B2D3C14B1003302F2 /* MeshHelpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MeshHelpers.hpp; sourceTree = "<group>"; };
+		5B5C9B9C2D3C14B1003302F2 /* MeshHelpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MeshHelpers.cpp; sourceTree = "<group>"; };
+		5B5C9BA52D3C6101003302F2 /* Mesh.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Mesh.hpp; sourceTree = "<group>"; };
+		5B5C9BA62D3C6101003302F2 /* Mesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
+		5B5C9BA82D3D15D2003302F2 /* MatrixMath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrixMath.h; sourceTree = "<group>"; };
+		5BBB6F172D117F6800183FFC /* Parameters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parameters.h; sourceTree = "<group>"; };
+		5BBB6F1E2D1301A300183FFC /* Interpolate.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Interpolate.metal; sourceTree = "<group>"; };
+		5BBB6F202D1301AC00183FFC /* Interpolate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Interpolate.h; sourceTree = "<group>"; };
+		5BBB6F222D130D5E00183FFC /* forceCalculation.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = forceCalculation.metal; sourceTree = "<group>"; };
+		5BBB6F262D144D6E00183FFC /* largeSphere.stl */ = {isa = PBXFileReference; lastKnownFileType = text; path = largeSphere.stl; sourceTree = "<group>"; };
+		5BBB6F272D146B5E00183FFC /* penguin.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = penguin.stl; sourceTree = "<group>"; };
+		5BBB6F282D1846B000183FFC /* cylinder.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = cylinder.stl; sourceTree = "<group>"; };
+		5BFF80E02D0218890096B3B0 /* Lattice Boltzman */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Lattice Boltzman"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BFF80EB2D0218B40096B3B0 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		5BFF80ED2D0218BA0096B3B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5BFF80F12D0219040096B3B0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		5BFF80FE2D0254440096B3B0 /* step.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = step.metal; sourceTree = "<group>"; };
+		5BFF81442D05B56A0096B3B0 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		5BFF814B2D05C1D50096B3B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5BFF81832D05DEED0096B3B0 /* Render.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Render.cpp; sourceTree = "<group>"; };
+		5BFF81852D05DF210096B3B0 /* Render.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Render.hpp; sourceTree = "<group>"; };
+		5BFF81862D05E3010096B3B0 /* render.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = render.metal; sourceTree = "<group>"; };
+		5BFF81892D05F9770096B3B0 /* ViewExtender.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewExtender.mm; sourceTree = "<group>"; };
+		5BFF818B2D05FAD30096B3B0 /* ViewAdapter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ViewAdapter.hpp; sourceTree = "<group>"; };
+		5BFF818C2D05FED40096B3B0 /* ViewPass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewPass.m; sourceTree = "<group>"; };
+		5BFF81912D060C970096B3B0 /* Camera.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
+		5BFF81922D060C970096B3B0 /* Camera.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		5BFF81992D07298F0096B3B0 /* Compute.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Compute.hpp; sourceTree = "<group>"; };
+		5BFF819A2D07298F0096B3B0 /* Compute.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Compute.cpp; sourceTree = "<group>"; };
+		5BFF819D2D072A1E0096B3B0 /* MetalHelpers.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MetalHelpers.hpp; sourceTree = "<group>"; };
+		5BFF81A12D072B5F0096B3B0 /* ParticleTrails.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ParticleTrails.hpp; sourceTree = "<group>"; };
+		5BFF81A22D072B5F0096B3B0 /* ParticleTrails.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleTrails.cpp; sourceTree = "<group>"; };
+		5BFF81A62D07341F0096B3B0 /* InteriorTesting.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InteriorTesting.hpp; sourceTree = "<group>"; };
+		5BFF81A72D07341F0096B3B0 /* InteriorTesting.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InteriorTesting.cpp; sourceTree = "<group>"; };
+		5BFF81A92D07343C0096B3B0 /* stl_reader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stl_reader.h; sourceTree = "<group>"; };
+		5BFF81AA2D0734A60096B3B0 /* Icoss.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = Icoss.stl; sourceTree = "<group>"; };
+		5BFF81AC2D08BA6B0096B3B0 /* cube.stl */ = {isa = PBXFileReference; lastKnownFileType = text; path = cube.stl; sourceTree = "<group>"; };
+		5BFF81AE2D08C9C50096B3B0 /* Icos.stl */ = {isa = PBXFileReference; lastKnownFileType = text; path = Icos.stl; sourceTree = "<group>"; };
+		5BFF81AF2D08CA0B0096B3B0 /* full_car.stl */ = {isa = PBXFileReference; lastKnownFileType = file; path = full_car.stl; sourceTree = "<group>"; };
+		5BFF81B02D08CA480096B3B0 /* astronaut.stl */ = {isa = PBXFileReference; lastKnownFileType = text; path = astronaut.stl; sourceTree = "<group>"; };
+		5BFF81B12D09F7A40096B3B0 /* MetalHelpers.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MetalHelpers.cpp; sourceTree = "<group>"; };
+		5BFF81B52D0A17200096B3B0 /* SimulationConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulationConstants.h; sourceTree = "<group>"; };
+		5BFF81B82D0A22CD0096B3B0 /* AppDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AppDelegate.hpp; sourceTree = "<group>"; };
+		5BFF81B92D0A22CD0096B3B0 /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
+		5BFF81BC2D0A23870096B3B0 /* ViewDelegate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ViewDelegate.hpp; sourceTree = "<group>"; };
+		5BFF81BD2D0A23870096B3B0 /* ViewDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ViewDelegate.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BFF80DD2D0218890096B3B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BFF814C2D05C1D50096B3B0 /* QuartzCore.framework in Frameworks */,
+				5BFF81472D05BA9F0096B3B0 /* MetalKit.framework in Frameworks */,
+				5BFF80EC2D0218B40096B3B0 /* Metal.framework in Frameworks */,
+				5BFF80EE2D0218BA0096B3B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B5C9B9A2D3C14A0003302F2 /* MeshHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				5B5C9B9B2D3C14B1003302F2 /* MeshHelpers.hpp */,
+				5B5C9B9C2D3C14B1003302F2 /* MeshHelpers.cpp */,
+			);
+			path = MeshHelpers;
+			sourceTree = "<group>";
+		};
+		5B5C9BA12D3C4400003302F2 /* Mesh */ = {
+			isa = PBXGroup;
+			children = (
+				5B5C9BA52D3C6101003302F2 /* Mesh.hpp */,
+				5B5C9BA62D3C6101003302F2 /* Mesh.cpp */,
+				5BFF81A92D07343C0096B3B0 /* stl_reader.h */,
+			);
+			path = Mesh;
+			sourceTree = "<group>";
+		};
+		5BBB6F1D2D13018500183FFC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5BBB6F212D1301B100183FFC /* Interpolate */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5BBB6F212D1301B100183FFC /* Interpolate */ = {
+			isa = PBXGroup;
+			children = (
+				5BBB6F1E2D1301A300183FFC /* Interpolate.metal */,
+				5BBB6F202D1301AC00183FFC /* Interpolate.h */,
+			);
+			path = Interpolate;
+			sourceTree = "<group>";
+		};
+		5BFF80D72D0218890096B3B0 = {
+			isa = PBXGroup;
+			children = (
+				5BFF80F22D0219040096B3B0 /* Lattice Boltzman */,
+				5BFF80EA2D0218B40096B3B0 /* Frameworks */,
+				5BFF80E12D0218890096B3B0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BFF80E12D0218890096B3B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF80E02D0218890096B3B0 /* Lattice Boltzman */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BFF80EA2D0218B40096B3B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF814B2D05C1D50096B3B0 /* QuartzCore.framework */,
+				5BFF81442D05B56A0096B3B0 /* MetalKit.framework */,
+				5BFF80ED2D0218BA0096B3B0 /* Foundation.framework */,
+				5BFF80EB2D0218B40096B3B0 /* Metal.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BFF80F22D0219040096B3B0 /* Lattice Boltzman */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF81B42D0A170C0096B3B0 /* Parameters */,
+				5BFF81AC2D08BA6B0096B3B0 /* cube.stl */,
+				5BBB6F272D146B5E00183FFC /* penguin.stl */,
+				5BFF81AE2D08C9C50096B3B0 /* Icos.stl */,
+				5BBB6F262D144D6E00183FFC /* largeSphere.stl */,
+				5B5126D02D0DFD5500988EF1 /* sphere.stl */,
+				5B5126D12D0EDF4C00988EF1 /* tube.stl */,
+				5BFF81AA2D0734A60096B3B0 /* Icoss.stl */,
+				5BBB6F282D1846B000183FFC /* cylinder.stl */,
+				5BFF81B02D08CA480096B3B0 /* astronaut.stl */,
+				5BFF81AF2D08CA0B0096B3B0 /* full_car.stl */,
+				5BFF81A42D0733E00096B3B0 /* Mesh */,
+				5BFF80F42D0219090096B3B0 /* Metal */,
+				5BFF80F12D0219040096B3B0 /* main.cpp */,
+			);
+			path = "Lattice Boltzman";
+			sourceTree = "<group>";
+		};
+		5BFF80F42D0219090096B3B0 /* Metal */ = {
+			isa = PBXGroup;
+			children = (
+				5B5C9BA12D3C4400003302F2 /* Mesh */,
+				5BFF81A02D072B4E0096B3B0 /* Particles */,
+				5BFF819C2D072A0B0096B3B0 /* Helpers */,
+				5BFF81982D07295C0096B3B0 /* Compute */,
+				5BFF818E2D060C560096B3B0 /* Rendering */,
+				5BFF80FD2D0254350096B3B0 /* commands */,
+			);
+			path = Metal;
+			sourceTree = "<group>";
+		};
+		5BFF80FD2D0254350096B3B0 /* commands */ = {
+			isa = PBXGroup;
+			children = (
+				5BBB6F1D2D13018500183FFC /* Helpers */,
+				5BFF80FE2D0254440096B3B0 /* step.metal */,
+				5B5C9B932D3C0F56003302F2 /* particles.metal */,
+				5BFF81862D05E3010096B3B0 /* render.metal */,
+				5BBB6F222D130D5E00183FFC /* forceCalculation.metal */,
+			);
+			path = commands;
+			sourceTree = "<group>";
+		};
+		5BFF818E2D060C560096B3B0 /* Rendering */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF81BB2D0A23780096B3B0 /* ViewDelegate */,
+				5BFF81B62D0A22A50096B3B0 /* AppDelegate */,
+				5BFF81902D060C780096B3B0 /* Camera */,
+				5BFF818F2D060C600096B3B0 /* ViewAdapter */,
+				5BFF81852D05DF210096B3B0 /* Render.hpp */,
+				5BFF81832D05DEED0096B3B0 /* Render.cpp */,
+			);
+			path = Rendering;
+			sourceTree = "<group>";
+		};
+		5BFF818F2D060C600096B3B0 /* ViewAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF818C2D05FED40096B3B0 /* ViewPass.m */,
+				5BFF818B2D05FAD30096B3B0 /* ViewAdapter.hpp */,
+				5BFF81892D05F9770096B3B0 /* ViewExtender.mm */,
+			);
+			path = ViewAdapter;
+			sourceTree = "<group>";
+		};
+		5BFF81902D060C780096B3B0 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF81912D060C970096B3B0 /* Camera.hpp */,
+				5BFF81922D060C970096B3B0 /* Camera.cpp */,
+				5B5C9BA82D3D15D2003302F2 /* MatrixMath.h */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		5BFF81982D07295C0096B3B0 /* Compute */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF81992D07298F0096B3B0 /* Compute.hpp */,
+				5BFF819A2D07298F0096B3B0 /* Compute.cpp */,
+			);
+			path = Compute;
+			sourceTree = "<group>";
+		};
+		5BFF819C2D072A0B0096B3B0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF819D2D072A1E0096B3B0 /* MetalHelpers.hpp */,
+				5BFF81B12D09F7A40096B3B0 /* MetalHelpers.cpp */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		5BFF81A02D072B4E0096B3B0 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF81A12D072B5F0096B3B0 /* ParticleTrails.hpp */,
+				5BFF81A22D072B5F0096B3B0 /* ParticleTrails.cpp */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
+		5BFF81A42D0733E00096B3B0 /* Mesh */ = {
+			isa = PBXGroup;
+			children = (
+				5B5C9B9A2D3C14A0003302F2 /* MeshHelpers */,
+				5BFF81A52D0734050096B3B0 /* InteriorTesting */,
+			);
+			path = Mesh;
+			sourceTree = "<group>";
+		};
+		5BFF81A52D0734050096B3B0 /* InteriorTesting */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF81A62D07341F0096B3B0 /* InteriorTesting.hpp */,
+				5BFF81A72D07341F0096B3B0 /* InteriorTesting.cpp */,
+			);
+			path = InteriorTesting;
+			sourceTree = "<group>";
+		};
+		5BFF81B42D0A170C0096B3B0 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF81B52D0A17200096B3B0 /* SimulationConstants.h */,
+				5BBB6F172D117F6800183FFC /* Parameters.h */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		5BFF81B62D0A22A50096B3B0 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF81B82D0A22CD0096B3B0 /* AppDelegate.hpp */,
+				5BFF81B92D0A22CD0096B3B0 /* AppDelegate.cpp */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		5BFF81BB2D0A23780096B3B0 /* ViewDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				5BFF81BC2D0A23870096B3B0 /* ViewDelegate.hpp */,
+				5BFF81BD2D0A23870096B3B0 /* ViewDelegate.cpp */,
+			);
+			path = ViewDelegate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BFF80DF2D0218890096B3B0 /* Lattice Boltzman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BFF80E72D0218890096B3B0 /* Build configuration list for PBXNativeTarget "Lattice Boltzman" */;
+			buildPhases = (
+				5BFF80DC2D0218890096B3B0 /* Sources */,
+				5BFF80DD2D0218890096B3B0 /* Frameworks */,
+				5BFF80DE2D0218890096B3B0 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lattice Boltzman";
+			packageProductDependencies = (
+			);
+			productName = "Lattice Boltzman";
+			productReference = 5BFF80E02D0218890096B3B0 /* Lattice Boltzman */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BFF80D82D0218890096B3B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					5BFF80DF2D0218890096B3B0 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+				};
+			};
+			buildConfigurationList = 5BFF80DB2D0218890096B3B0 /* Build configuration list for PBXProject "Lattice Boltzman" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BFF80D72D0218890096B3B0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5BFF80E12D0218890096B3B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BFF80DF2D0218890096B3B0 /* Lattice Boltzman */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BFF80DC2D0218890096B3B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B5C9B9D2D3C14B1003302F2 /* MeshHelpers.cpp in Sources */,
+				5BFF81872D05E3010096B3B0 /* render.metal in Sources */,
+				5BFF80FF2D0254440096B3B0 /* step.metal in Sources */,
+				5BFF81BA2D0A22CD0096B3B0 /* AppDelegate.cpp in Sources */,
+				5BBB6F1F2D1301A300183FFC /* Interpolate.metal in Sources */,
+				5BFF81B22D09F7A40096B3B0 /* MetalHelpers.cpp in Sources */,
+				5BFF818A2D05F9770096B3B0 /* ViewExtender.mm in Sources */,
+				5BFF819B2D07298F0096B3B0 /* Compute.cpp in Sources */,
+				5BFF81A82D07341F0096B3B0 /* InteriorTesting.cpp in Sources */,
+				5BFF81BE2D0A23870096B3B0 /* ViewDelegate.cpp in Sources */,
+				5B5C9BA72D3C6101003302F2 /* Mesh.cpp in Sources */,
+				5B5C9B942D3C0F56003302F2 /* particles.metal in Sources */,
+				5BFF81A32D072B5F0096B3B0 /* ParticleTrails.cpp in Sources */,
+				5BFF81932D060C970096B3B0 /* Camera.cpp in Sources */,
+				5BBB6F232D130D5E00183FFC /* forceCalculation.metal in Sources */,
+				5BFF80F32D0219040096B3B0 /* main.cpp in Sources */,
+				5BFF81842D05DEF50096B3B0 /* Render.cpp in Sources */,
+				5BFF818D2D05FEE90096B3B0 /* ViewPass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5BFF80E52D0218890096B3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5BFF80E62D0218890096B3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5BFF80E82D0218890096B3B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"/Users/charlieclose/Documents/Programs/C++/metal-cpp",
+					"/Users/charlieclose/Documents/Programs/C++/metal-cpp-extensions",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5BFF80E92D0218890096B3B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"/Users/charlieclose/Documents/Programs/C++/metal-cpp",
+					"/Users/charlieclose/Documents/Programs/C++/metal-cpp-extensions",
+				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BFF80DB2D0218890096B3B0 /* Build configuration list for PBXProject "Lattice Boltzman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BFF80E52D0218890096B3B0 /* Debug */,
+				5BFF80E62D0218890096B3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BFF80E72D0218890096B3B0 /* Build configuration list for PBXNativeTarget "Lattice Boltzman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BFF80E82D0218890096B3B0 /* Debug */,
+				5BFF80E92D0218890096B3B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BFF80D82D0218890096B3B0 /* Project object */;
+}

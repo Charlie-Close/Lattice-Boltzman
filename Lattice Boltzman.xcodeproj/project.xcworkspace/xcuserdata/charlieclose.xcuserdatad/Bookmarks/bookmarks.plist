@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>top-level-items</key>
+	<array>
+		<dict>
+			<key>destination</key>
+			<dict>
+				<key>location-parameters</key>
+				<dict>
+					<key>EndingColumnNumber</key>
+					<string>0</string>
+					<key>EndingLineNumber</key>
+					<string>30</string>
+					<key>StartingColumnNumber</key>
+					<string>0</string>
+					<key>StartingLineNumber</key>
+					<string>29</string>
+					<key>Timestamp</key>
+					<string>758978233.5922199</string>
+				</dict>
+				<key>rebasable-url</key>
+				<dict>
+					<key>base</key>
+					<string>workspace</string>
+					<key>payload</key>
+					<dict>
+						<key>relative-path</key>
+						<string>Lattice Boltzman/Mesh/InteriorTesting/InteriorTesting.hpp</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>text-context</key>
+			<dict>
+				<key>focused</key>
+				<string>    simd_float3 _rayDir = { 1.0, 0.0, 0.0 };
+</string>
+				<key>leading</key>
+				<string>    simd_int3 _maxVertex;
+    
+</string>
+				<key>trailing</key>
+				<string>    
+    bool findIntersectionPoint(const simd_float3&amp; orig, const simd_float3&amp; dir,
+                               const simd_float3&amp; v0, const simd_float3&amp; v1, const simd_float3&amp; v2, simd_float3&amp; intersectionPoint);
+</string>
+			</dict>
+			<key>type</key>
+			<string>bookmark</string>
+		</dict>
+	</array>
+</dict>
+</plist>
