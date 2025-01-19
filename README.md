@@ -2,7 +2,7 @@
 
 This project implements a high-performance Lattice Boltzmann Method (LBM) simulation using Metal C++. Designed to leverage the full power of Apple Silicon GPUs, it achieves **real-time simulation** speeds even for large-scale problems.
 
-Simulation uses both the multiple relaxation time method for D3Q27 as described in ["A D3Q27 multiple-relaxation-time lattice Boltzmann method for turbulent flows"](https://www.sciencedirect.com/science/article/pii/S0898122115000346)
+Simulation uses the multiple relaxation time method for D3Q27 as described in ["A D3Q27 multiple-relaxation-time lattice Boltzmann method for turbulent flows"](https://www.sciencedirect.com/science/article/pii/S0898122115000346)
 
 Expects the model files to be input as an stl.
 
